@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+</head>
+
+
+<style>
+
+  
+     body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: antiquewhite;
+           
+           
+        }
+
+       
+        input#www {
+            padding: 10px;
+            margin: 20px;
+            width: 300px;
+            border: 2px solid #291212;
+            border-radius: 4px;
+           
+            
+        }
+
+        
+        button {
+            padding: 10px 15px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #3ab356;
+            color: rgb(234, 223, 223);
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        
+        ul#ww {
+            list-style-type: none;
+            padding: 0;
+        }
+
+      
+        ul#ww li {
+            background: #d49a9a;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #211414;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+       
+        ul#ww li button {
+            background-color: #267e92;
+        }
+
+        ul#ww li button:hover {
+            background-color: #1d0953;
+        }
+        .id{
+            text-align: left;
+            background-color: transparent;
+        }
+        
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+ <div class="id">
+<input id="www" >
+  <button onclick="add()">add</button>
+ </div>
+
+  <ul id="ww">
+    <li>hello
+        <button  onclick="deletee(event)">remove</button>
+    </li>
+  </ul>
+
+  <script>
+     var ul=document.getElementById("ww")
+     var input=document.getElementById("www")
+     
+     function add(){
+        var li=document.createElement("li")
+        li.innerHTML=input.value + "<button onclick='deletee(event)'>delete</button>"
+        ul.append(li)
+     }
+
+     function deletee(event){
+       
+        event.target.parentNode.remove()
+             
+     }
+  </script>
+  </body>
+</html>
